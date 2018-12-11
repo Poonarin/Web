@@ -70,6 +70,7 @@ public class MyServlet extends HttpServlet {
             for (int i = 0; i < listBooks.size(); i++) {
                 if (listBooks.get(i).getIsbn().equals(book)) {
                     giveBook = listBooks.get(i);
+                    break;
                 }
 
             }
@@ -77,11 +78,14 @@ public class MyServlet extends HttpServlet {
             for (int i = 0; i < listReaders.size(); i++) {
                 if (listReaders.get(i).getCode().equals(reader)) {
                     takeReader = listReaders.get(i);
+                    
                 }
 
             }
             Calendar c = new GregorianCalendar();
             History history = new History(giveBook, takeReader, c.getTime());
+            request.setAttribute("history",history);
+            request.getRequestDispatcher("/WEB-INF/page5.jsp").forward(request, response);
         }
         
         

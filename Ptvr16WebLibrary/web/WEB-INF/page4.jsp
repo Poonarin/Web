@@ -17,14 +17,14 @@
         <h2><b>${info}</b><br></h2>
         <hr>
         <form action="giveBook" method="POST">
-            <select name="book" items="${listBooks}">
+            <select name="book">
                 <c:forEach var="bookItem" items="${listBooks}">
-                    <option value=>${bookItem.isbn}, ${bookItem.name}  </option> 
+                    <option value=${bookItem.isbn}> ${bookItem.name}  </option> 
                 </c:forEach>
             </select>
-            <select name="reader" items="${listReaders}">
+            <select name="reader" >
                 <c:forEach var="readerItem" items="${listReaders}">
-                    <option value=>${readerItem.name} ${readerItem.surname}, ${readerItem.code}</option> 
+                    <option value=${readerItem.code}>${readerItem.name} ${readerItem.surname} </option> 
                 </c:forEach>
             </select>
             <input type="submit" value="Выдать книгу">
