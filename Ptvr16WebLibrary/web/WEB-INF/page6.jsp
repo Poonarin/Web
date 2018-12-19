@@ -14,12 +14,12 @@
         <a href="index.html">Главная страница</a> 
 
         <form action="addNewBook" method="POST">
-            <p>Название:</p>
+            Имя
             <input type="text" name="name">
-            Автор:
-            <input type="text" name="author">
-            CODE: 
-            <input type="text" name="isbn">
+            Фамилия
+            <input type="text" name="surname">
+            CODE
+            <input type="text" name="code">
             <hr>
             <input type="submit" value="Добавить">
             
